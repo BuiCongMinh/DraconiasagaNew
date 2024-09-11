@@ -51,7 +51,11 @@ $news = $wpdb->get_results("
         <?php foreach ($news as $new): ?>
             <tr>
                 <td><?= esc_html($new->title) ?></td>
-                <td><?= substr($new->content, 0, 120) ?></td>
+                <td>
+                    <?php if (strlen($new->content) > 120): ?>
+                    <?= substr($new->content, 0, 120) . '...' ?>
+                    <?php endif; ?>
+                </td>
                 <td><?= esc_html($new->category_name) ?></td>
                 <td><?= esc_html($new->created_at) ?></td>
                 <td style="display: flex; gap: 10px; align-items: center;">
