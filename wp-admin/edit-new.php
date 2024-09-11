@@ -36,6 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['title']) && isset($_PO
 
     $wpdb->update($table_name, $data_to_update, array('id' => $_GET['new_id']));
     $url = 'edit-new.php?new_id=' . $_GET["new_id"];
+    echo "<script>alert('Cập nhật thành công');</script>";
     echo '<script type="text/javascript">window.location.href="' . admin_url($url) . '";</script>';
     exit;
 }
