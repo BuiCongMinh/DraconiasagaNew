@@ -35,7 +35,7 @@ global $wpdb;
 // }
 
 $types = $wpdb->get_results("
-    SELECT id, tittle
+    SELECT id, title
     FROM {$wpdb->prefix}newtype
 	ORDER BY id ASC
 ");
@@ -47,9 +47,6 @@ if ($query) {
 }
 $sql .= " ORDER BY id DESC";
 $news = $wpdb->get_results($sql);
-// echo "<pre>";
-// print_r($news);
-// exit;
 ?>
 
 <div class="news">
@@ -60,7 +57,7 @@ $news = $wpdb->get_results($sql);
 			</li>
 			<?php foreach ($types as $type): ?>
 				<li class="tab-item <?= $query == $type->id ? 'active' : ''; ?>">
-					<a href="?type=<?= $type->id ?>" class="item"><?= esc_html($type->tittle) ?></a>
+					<a href="?type=<?= $type->id ?>" class="item"><?= esc_html($type->title) ?></a>
 				</li>
 			<?php endforeach; ?>
 			<li class="all-new">
@@ -77,7 +74,7 @@ $news = $wpdb->get_results($sql);
 		<div class="content">
 			<?php foreach ($news as $new): ?>
 				<div class="row flex">
-					<a class="title"><?= $new->tittle ?></a>
+					<a class="title"><?= $new->title ?></a>
 					<span class="time"><?= $new->created_at ?></span>
 				</div>
 			<?php endforeach; ?>
