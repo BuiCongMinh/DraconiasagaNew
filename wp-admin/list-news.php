@@ -28,7 +28,7 @@ $news = $wpdb->get_results("
     SELECT news.*, newtype.title AS category_name FROM {$wpdb->prefix}news news
     JOIN {$wpdb->prefix}newtype newtype
     ON newtype.id = news.new_id
-    ORDER BY news.id ASC
+    ORDER BY news.id DESC
 ");
 ?>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
