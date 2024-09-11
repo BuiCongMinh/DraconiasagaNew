@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+}
+
+.sector_5 {
+    width: 100%;
+    height: 100%;
+    background: url("http://localhost/news/wp-content/themes/twentytwentyfour/assets/images/sector5/bg.jpg") center no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.new {
+    margin-top: 6vw;
+    width: 75vw;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+}
+
+.new_title {
+    width: 100%;
+}
+
+.new_title h5 {
+    width: 100%;
+    height: 5vw;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    font-size: 3.125vw;
+    line-height: 4.1667vw;
+    font-weight: bold;
+    color: white;
+}
+
+.new_title h5 span {
+    width: 100%;
+    display: inline-block;
+    background:
+        url('http://localhost/news/wp-content/themes/twentytwentyfour/assets/images/item/title_left.png')left center no-repeat,
+        url('http://localhost/news/wp-content/themes/twentytwentyfour/assets/images/item/title_right.png')right center no-repeat;
+    background-size: 32%;
+    object-fit: cover;
+    padding: 0 19.4792vw;
+    text-transform: capitalize;
+
+}
+
+.new_body {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+
+:root {
+    --swiper-navigation-size: 2.5vw !important;
+}
+
+.swiper {
+    width: 55%;
+    height: 26.5vw;
+    margin: 0 !important;
+    cursor: pointer;
+}
+
+.swiper-slide {
+    height: 95% !important;
+    text-align: center;
+    font-size: 18px;
+    background: url('http://localhost/news/wp-content/themes/twentytwentyfour/assets/images/sector5/news_img.jpg') center no-repeat;
+    background-size: contain;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    width: 0 !important;
+}
+
+.swiper-pagination {
+    bottom: 0 !important
+}
+
+nav {
+    width: 100%;
+    height: 6vw;
+    display: flex;
+}
+
+.news {
+    display: flex;
+    flex-direction: column;
+    margin-left: 3vw;
+    flex: 1;
+    height: 100%;
+
+}
+
+.news .list-tabs {
+    width: 100%;
+}
+
+.news .list-tabs .tabs {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+    position: relative;
+}
+
+.news .list-tabs .tabs .tab-item {
+    width: 6vw;
+    height: 3vw;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.news .list-tabs .tabs .line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    border-radius: 1.5px;
+    background: #d86b1a;
+    transition: all 0.2s ease;
+}
+
+.news .list-tabs .tabs .tab-item.active,
+.news .list-tabs .tabs .tab-item.active a {
+    background: url('http://localhost/news/wp-content/themes/twentytwentyfour/assets/images/sector5/tab_active.png') center no-repeat;
+    background-size: cover;
+    color: #d86b1a;
+
+}
+
+.news .list-tabs .tabs .all-new {
+    width: 9vw;
+    height: 3vw;
+    background: url('http://localhost/news/wp-content/themes/twentytwentyfour/assets/images/sector5/more.png') left no-repeat;
+    background-size: cover;
+    opacity: 0.7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.15vw;
+}
+
+.news .list-tabs .tabs .all-new a {
+    opacity: 1;
+    color: white;
+}
+
+.news .list-tabs .tabs .all-new span {
+    width: 1vw;
+    height: 1vw;
+    background: url('http://localhost/news/wp-content/themes/twentytwentyfour/assets/images/sector5/more_arrow.png')center no-repeat;
+    background-size: contain;
+}
+
+.news .list-tabs .tabs .all-new:hover {
+    opacity: 1;
+}
+
+
+.news .list-tabs .tabs a {
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 1vw;
+    opacity: 0.7;
+    font-weight: 700;
+    color: rgb(32, 30, 30);
+}
+
+.news .list-tabs .tabs .tab-item:hover .item {
+    color: #d86b1a;
+}
+
+/* line-bottom  */
+.news .line {
+    width: 100%;
+    height: 1vw;
+    background: url('http://localhost/news/wp-content/themes/twentytwentyfour/assets/images/sector5/title_bottom.png') top no-repeat;
+    background-size: contain;
+}
+
+
+/* content */
+.flex {
+    width: 100%;
+    display: flex;
+}
+
+.news .list-content {
+    height: 100%;
+}
+
+.news .content {
+    width: 100%;
+    height: 100%;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.news .content.active {
+    display: flex;
+}
+
+.news .content .row {
+    font-size: 1vw;
+    justify-content: space-between;
+    color: #3d4b57;
+    border-bottom: 1px dashed #bbbbbb;
+    cursor: pointer;
+    display: flex;
+    opacity: 0.8;
+    align-items: center;
+    padding: 25px 0;
+}
+
+.news .content .row:hover {
+    opacity: 1;
+}
