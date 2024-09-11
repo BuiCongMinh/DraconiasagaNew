@@ -66,6 +66,7 @@ $menu[4] = array( '', 'read', 'separator1', '', 'wp-menu-separator' );
 $menu[9]                      = array( __( 'New' ), 'read', 'list-news.php', '', 'menu-top menu-icon-post', 'menu-post', 'dashicons-admin-post' );
 	$submenu['list-news.php'][5]  = array( __( 'Tất cả tin tức' ), 'read', 'list-news.php' );
 	$submenu['list-news.php'][10] = array( __( 'Thêm tin tức' ), 'read', 'add-new.php' );
+	$submenu['list-news.php'][20] = array( __( 'Tất cả danh mục' ), 'read', 'list-categories.php' );
 	$submenu['list-news.php'][15] = array( __( 'Thêm danh mục' ), 'read', 'add-category.php' );
 
 $menu[10]                      = array( __( 'Media' ), 'upload_files', 'upload.php', '', 'menu-top menu-icon-media', 'menu-media', 'dashicons-admin-media' );
