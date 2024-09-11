@@ -52,7 +52,7 @@ $news = $wpdb->get_results("
             <tr>
                 <td><?= esc_html($new->title) ?></td>
                 <td>
-                    <?php if (strlen(trim($new->content)) > 120): ?>
+                    <?php if (strlen($new->content) > 120): ?>
                     <?= substr($new->content, 0, 120) . '...' ?>
                     <?php endif; ?>
                 </td>
