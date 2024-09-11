@@ -53,7 +53,8 @@ $news = $wpdb->get_results("
                 <td><?= esc_html($new->title) ?></td>
                 <td>
                     <?php if (strlen($new->content) > 120): ?>
-                    <?= substr($new->content, 0, 120) . '...' ?>
+                    <?= substr($new->content, 0, 120) ?>
+                    <span>...</span>
                     <?php endif; ?>
                 </td>
                 <td><?= esc_html($new->category_name) ?></td>
