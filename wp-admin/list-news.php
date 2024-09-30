@@ -37,7 +37,7 @@ $news = $wpdb->get_results("
     <h1>Danh sách tin tức</h1>
     <a href="add-new.php" style="border: 1px solid; padding: 10px">Tạo tin tức</a>
 </div>
-<table class="table">
+<table class="table table-hover">
     <thead>
         <tr>
             <th>Tiêu đề</th>
@@ -54,8 +54,8 @@ $news = $wpdb->get_results("
                 <td><?= esc_html($new->title) ?></td>
                 <td><?= esc_html($new->author) ?></td>
                 <td>
-                    <?php if (strlen($new->content) > 120): ?>
-                    <?= substr($new->content, 0, 120) ?>
+                    <?php if (strlen($new->content) > 65): ?>
+                    <?= substr($new->content, 0, 65) ?>
                     <span>...</span>
                     <?php else: ?>
                     <?= $new->content ?>
@@ -63,7 +63,7 @@ $news = $wpdb->get_results("
                 </td>
                 <td><?= esc_html($new->category_name) ?></td>
                 <td><?= esc_html($new->created_at) ?></td>
-                <td style="display: flex; gap: 10px; align-items: center;">
+                <td >
                     <a href="edit-new.php?new_id=<?= $new->id ?>">Chỉnh sửa</a>
                     <span>|</span>
                     <a style="color: red" class="deleteNew" href="#" data-id="<?= $new->id ?>">Xoá</a>

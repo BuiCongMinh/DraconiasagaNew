@@ -136,5 +136,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['title']) && isset($_PO
     </script>
 </form>
 
+
 <?php
 require_once ABSPATH . 'wp-admin/admin-footer.php';
