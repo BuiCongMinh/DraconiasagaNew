@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    overflow: hidden;
+}
+
+.image-header {
+    height: 75vh !important;
+}
+
+p {
+    line-height: 32px;
+    color: #3d4b57;
+    font-size: 18px;
+    margin: 0 !important;
+}
+
+.footer p {
+    color: #000;
+}
+
+a {
+    font-size: 19px;
+    color: black !important;
+    text-decoration: none !important;
+}
+
+a:hover {
+    text-decoration: underline !important;
+}
+
+
+.main {
+    background-color: #f6f5f1;
+}

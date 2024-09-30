@@ -14,8 +14,9 @@ global $wpdb;
 $categories = $wpdb->get_results("SELECT * FROM {$wpdb->prefix}newtype");
 
 
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['title']) && isset($_POST['content']) && isset($_POST['category_id'])) {
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['title']) && isset($_POST['author']) && isset($_POST['content']) && isset($_POST['category_id'])) {
     $title = $_POST['title'];
+    $author = $_POST['author'];
     $content = $_POST['content'];
     $category_id = $_POST['category_id'];
 
@@ -29,6 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['title']) && isset($_PO
 
     $data_to_insert = array(
         'title' => $title,
+        'author' => $author,
         'content' => $content,
         'new_id' => $category_id,
     );
@@ -53,6 +55,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['title']) && isset($_PO
     <div class="form-group" style="padding-right: 20px">
         <label for="title" style="width: 100%">Tiêu đề:</label>
         <input type="text" value="<?= $_POST['title'] ?>" class="form-control" id="title" name="title" required>
+    </div>
+    <div class="form-group" style="padding-right: 20px">
+        <label for="author" style="width: 100%">Tác giả:</label>
+        <input type="text" value="<?= $new->author ?>" class="form-control" id="author" name="author" required>
     </div>
     <div class="form-group" style="padding-right: 20px">
         <label for="title" style="width: 100%">Danh mục:</label>

@@ -40,7 +40,7 @@ $types = $wpdb->get_results("
 	ORDER BY id ASC
 ");
 
-$query = isset($_GET['type']) ? sanitize_text_field($_GET['type']) : '';
+$query = isset($_GET['type']) ? $_GET['type'] : '';
 $sql = "SELECT * FROM {$wpdb->prefix}news";
 if ($query) {
 	$sql .= " WHERE new_id={$query}";
@@ -61,7 +61,7 @@ $news = $wpdb->get_results($sql);
 				</li>
 			<?php endforeach; ?>
 			<li class="all-new">
-				<a href="https://draconiasaga.hhgame.vn/news/index.html" target="_blank"> Xem tất
+				<a href="news.php?type=0" target="_blank"> Xem tất
 					cả</a>
 				<span></span>
 			</li>
@@ -74,7 +74,7 @@ $news = $wpdb->get_results($sql);
 		<div class="content">
 			<?php foreach ($news as $new): ?>
 				<div class="row flex">
-					<a class="title"><?= $new->title ?></a>
+					<a href="news.php?id=<?= $new->id ?>"class="title"><?= $new->title ?></a>
 					<span class="time"><?= $new->created_at ?></span>
 				</div>
 			<?php endforeach; ?>

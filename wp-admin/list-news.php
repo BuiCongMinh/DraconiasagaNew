@@ -41,6 +41,7 @@ $news = $wpdb->get_results("
     <thead>
         <tr>
             <th>Tiêu đề</th>
+            <th>Tác giả</th>
             <th>Nội dung</th>
             <th>Danh mục</th>
             <th>Ngày tạo</th>
@@ -51,10 +52,13 @@ $news = $wpdb->get_results("
         <?php foreach ($news as $new): ?>
             <tr>
                 <td><?= esc_html($new->title) ?></td>
+                <td><?= esc_html($new->author) ?></td>
                 <td>
                     <?php if (strlen($new->content) > 120): ?>
                     <?= substr($new->content, 0, 120) ?>
                     <span>...</span>
+                    <?php else: ?>
+                    <?= $new->content ?>
                     <?php endif; ?>
                 </td>
                 <td><?= esc_html($new->category_name) ?></td>

@@ -1,0 +1,36 @@
+.main .category .active {
+    position: relative;
+
+}
+
+.main .category a {
+    font-size: 1.5vw;
+    font-weight: bold;
+    line-height: 1.5vw;
+    color: #404b56 !important;
+}
+
+.main .category a:hover {
+    color: #c97032 !important;
+}
+
+.main .category .active a {
+    display: inline;
+    position: relative;
+    z-index: 9;
+    color: #c97032 !important;
+}
+
+.main .category .active::after {
+    z-index: 0;
+    content: "";
+    display: flex;
+    position: absolute;
+    bottom: 35%;
+    right: 50%;
+    transform: translate(50%, 50%);
+    width: 9vw;
+    height: 6vw;
+    background: url("../img/allnew-categori/tab_active.png") center no-repeat;
+    background-size: cover;
+}
